@@ -5,15 +5,15 @@
 ## Solver Makefile
 ##
 
-LIB_DIR = ./lib/
+LIB_DIR = ../lib/
 
 TEST = tests/tests.c	\
 
-SRC_DIR = ./src/solver/
-SRC_MAP = ./src/solver/map/
-SRC_SOLV = ./src/solver/solving/
+SRC_DIR = ./
+SRC_MAP = ./map/
+SRC_SOLV = ./solving/
 
-SRC = $(SRC_DIR)test.c	\
+SRC = $(SRC_DIR)bonjour.c	\
 
 SRC_BUILD	=	$(SRC) $(SRC_DIR)main.c
 
@@ -21,7 +21,7 @@ NAME = solver
 
 TEST_BIN = unit_tests
 
-CFLAGS = -Wall -Wextra -I./include/ -I./lib/
+CFLAGS = -Wall -Wextra -I../include/ -I ../lib/
 
 OBJ	=	$(SRC_BUILD:.c=.o)
 

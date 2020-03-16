@@ -5,3 +5,13 @@
 ## Project Makefile
 ##
 
+all :
+		make -C solver
+re :
+		make re -C solver
+
+clean : 
+		make clean -C solver
+
+fclean :
+		make fclean -C solver
