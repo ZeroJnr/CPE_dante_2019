@@ -16,5 +16,6 @@ int init_gen(char *av[], gen_t *gen);
 void display_maze(gen_t *gen);
 void my_free(gen_t *gen);
 int generate_maze(gen_t *gen);
+void rm_walls(gen_t *gen);
 
 #endif

@@ -16,6 +16,10 @@
 #include <stdbool.h>
 #include <time.h>
 
+#define MAZEGEN gen->maze.maze
+#define Y gen->param.height
+#define X gen->param.width
+
 typedef struct gen gen_t;
 typedef struct param param_t;
 typedef struct maze maze_t;
