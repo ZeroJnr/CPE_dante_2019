@@ -21,7 +21,7 @@
 // }
 
 
-static int error_handling(my_solv_t *my_solv, int ac)
+static int error_handling_solv(my_solv_t *my_solv, int ac)
 {
     if (ac < 2) {
         printf("Too few argument please, retry\n");
@@ -39,7 +39,7 @@ int main(int ac, char *av[])
     my_solv_t my_solv = {0};
     my_solv.my_map.filepath = av[1];
 
-    if (error_handling(&my_solv, ac) == 84)
+    if (error_handling_solv(&my_solv, ac) == 84)
         return 84;
     if (preparing_map(&my_solv) == 84)
         return (84);
