@@ -13,7 +13,12 @@ SRC_DIR = ./
 SRC_MAP = ./map/
 SRC_SOLV = ./solving/
 
-SRC = $(SRC_DIR)bonjour.c	\
+SRC = $(SRC_MAP)open_file.c	\
+	  $(SRC_MAP)read_file.c	\
+	  $(SRC_MAP)stat_file.c	\
+	  $(SRC_MAP)preparing_map.c	\
+	  $(SRC_SOLV)get_max.c	\
+	  $(SRC_SOLV)solving_map.c	\
 
 SRC_BUILD	=	$(SRC) $(SRC_DIR)main.c
 
