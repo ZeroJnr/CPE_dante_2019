@@ -9,6 +9,7 @@
 
 void my_free(gen_t *gen)
 {
-    for (int i = 0; i != gen->param.height; ++i)
+    for (int i = 0; gen->maze.maze[i] != NULL; ++i)
         free(gen->maze.maze[i]);
+    free(gen->maze.maze);
 }

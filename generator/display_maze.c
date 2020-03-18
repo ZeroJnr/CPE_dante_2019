@@ -9,9 +9,9 @@
 
 void display_maze(gen_t *gen)
 {
-    for (int y = 0; y < gen->param.height; ++y) {
-        for (int x = 0; x < gen->param.width + 1; ++x)
-            my_putchar(gen->maze.maze[y][x]);
-    }
-    my_putchar('\0');
+    int y = 0;
+
+    for (; gen->maze.maze[y + 1]; ++y)
+            my_putstr(gen->maze.maze[y]);
+    my_putstr(gen->maze.maze[y]);
 }

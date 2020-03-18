@@ -8,5 +8,12 @@
 #ifndef PROTO_GEN
 #define PROTO_GEN
 
+#include "struct_generator.h"
+
+int main(int ac, char *av[]);
+int error_handling(int ac, char *av[]);
+int init_gen(int ac, char *av[], gen_t *gen);
+void display_maze(gen_t *gen);
+void my_free(gen_t *gen);
 
 #endif
