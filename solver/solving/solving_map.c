@@ -7,16 +7,6 @@
 
 #include "dante.h"
 
-void write_map(my_solv_t *my_solv)
-{
-    for (int y = 0; y < Y_MAX; y++) {
-        for (int x = 0; x < X_MAX; x++) {
-            printf("%c", MAZE[y][x]);
-        }
-        printf("\n");
-    }
-}
-
 static int my_allocation(my_solv_t *my_solv)
 {
     MAZE = malloc(sizeof(char *) * (Y_MAX + 1));

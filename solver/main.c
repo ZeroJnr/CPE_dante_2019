@@ -43,7 +43,7 @@ int main(int ac, char *av[])
         return 84;
     if (preparing_map(&my_solv) == 84)
         return (84);
-    if (set_boolean(&my_solv) == false)
+    if (recursive_core(&my_solv) == false)
         return 84;
     return 0;
 }

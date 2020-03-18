@@ -20,7 +20,8 @@ int get_y_max(char *buffer);
 int get_x_max(char *str, int y_max);
 int get_max(my_solv_t *my_solv);
 int solving_map(my_solv_t *my_solv);
-bool set_boolean(my_solv_t *my_solv);
+bool recursive_core(my_solv_t *my_solv);
 int check_carac(my_solv_t *my_solv);
+bool recursivesolve(my_solv_t *my_solv, int x, int y);
 
 #endif
