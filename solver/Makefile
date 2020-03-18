@@ -17,6 +17,7 @@ SRC = $(SRC_MAP)open_file.c	\
 	  $(SRC_MAP)read_file.c	\
 	  $(SRC_MAP)stat_file.c	\
 	  $(SRC_MAP)preparing_map.c	\
+	  $(SRC_MAP)check_carac.c	\
 	  $(SRC_SOLV)get_max.c	\
 	  $(SRC_SOLV)solving_map.c	\
 	  $(SRC_SOLV)recursive_algorithm.c	\
