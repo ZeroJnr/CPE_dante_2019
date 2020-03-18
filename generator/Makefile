@@ -17,6 +17,7 @@ SRC =	$(SRC_DIR)error_handling.c	\
 		$(SRC_DIR)init_gen.c	\
 		$(SRC_DIR)my_free.c	\
 		$(SRC_DIR)generate_maze.c	\
+		$(SRC_DIR)rm_walls.c
 
 SRC_BUILD	=	$(SRC) $(SRC_DIR)main.c
 

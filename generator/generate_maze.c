@@ -27,10 +27,10 @@ static void set_lines(gen_t *gen, char *maze_line, char *previous)
 {
     int i = 0;
 
-    if (gen->param.width < 2)
+    if (X < 2)
         return;
     else if (maze_line == NULL) {
-        previous[gen->param.width - 2] = '*';
+        previous[X - 2] = '*';
         return;
     }
     for (; maze_line[i] != '\0'; ++i) {
@@ -41,13 +41,13 @@ static void set_lines(gen_t *gen, char *maze_line, char *previous)
 
 int generate_maze(gen_t *gen)
 {
-    int y = gen->param.height;
+    int y = Y;
 
     for (;y > 0; --y) {
         if (y % 2 == 0)
-            set_lines(gen, gen->maze.maze[y], gen->maze.maze[y - 1]);
+            set_lines(gen, MAZEGEN[y], MAZEGEN[y - 1]);
     }
-    if (gen->param.width == 2 && gen->param.height == 2)
-        gen->maze.maze[1][0] = 'X';
+    if (Y == 2 && X == 2)
+        MAZEGEN[1][0] = 'X';
     return 0;
 }
