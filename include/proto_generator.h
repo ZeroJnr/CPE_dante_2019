@@ -12,8 +12,9 @@
 
 int main(int ac, char *av[]);
 int error_handling(int ac, char *av[]);
-int init_gen(int ac, char *av[], gen_t *gen);
+int init_gen(char *av[], gen_t *gen);
 void display_maze(gen_t *gen);
 void my_free(gen_t *gen);
+int generate_maze(gen_t *gen);
 
 #endif

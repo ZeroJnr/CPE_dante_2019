@@ -13,8 +13,9 @@ int main (int ac, char *av[])
 
     if (error_handling(ac, av) == 84)
         return 84;
-    if (init_gen(ac, av, &gen) == 84)
+    if (init_gen(av, &gen) == 84)
         return (84);
+    generate_maze(&gen);
     display_maze(&gen);
     my_free(&gen);
 }

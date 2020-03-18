@@ -8,9 +8,6 @@
 all :
 		make -C solver
 		make -C generator
-re :
-		make re -C solver
-		make re -C generator
 
 clean :
 		make clean -C solver
@@ -19,3 +16,7 @@ clean :
 fclean :
 		make fclean -C solver
 		make fclean -C generator
+
+re :
+		make re -C solver
+		make re -C generator

@@ -14,6 +14,7 @@
 #include <string.h>
 #include <fcntl.h>
 #include <stdbool.h>
+#include <time.h>
 
 typedef struct gen gen_t;
 typedef struct param param_t;

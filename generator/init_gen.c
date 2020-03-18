@@ -29,12 +29,29 @@ static int my_alloc(gen_t *gen)
     return 0;
 }
 
-int init_gen(int ac, char *av[], gen_t *gen)
+static void init_lines(int y, int x, gen_t *gen)
 {
+    for (x = 0; gen->maze.maze[y][x] != '\0'; ++x) {
+        if (x % 2 == 0)
+            gen->maze.maze[y][x] = '*';
+    }
+}
+
+int init_gen(char *av[], gen_t *gen)
+{
+    int x = 0;
+    int y = 0;
     gen->param.width = atoi(av[1]);
     gen->param.height = atoi(av[2]);
+    srand((unsigned)time(NULL));
 
     if (my_alloc(gen) == 84)
         return 84;
+    for (; gen->maze.maze[0][x] != '\0'; ++x)
+        gen->maze.maze[0][x] = '*';
+    for (; gen->maze.maze[y] != NULL; y++) {
+        if (y % 2 == 0)
+            init_lines(y, x, gen);
+    }
     return 0;
 }

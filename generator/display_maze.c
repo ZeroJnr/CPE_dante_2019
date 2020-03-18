@@ -11,7 +11,9 @@ void display_maze(gen_t *gen)
 {
     int y = 0;
 
-    for (; gen->maze.maze[y + 1]; ++y)
+    for (; gen->maze.maze[y + 1]; ++y) {
             my_putstr(gen->maze.maze[y]);
+            my_putchar('\n');
+    }
     my_putstr(gen->maze.maze[y]);
 }
