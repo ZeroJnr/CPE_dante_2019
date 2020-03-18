@@ -9,7 +9,7 @@
 
 int read_file(my_solv_t *my_solv)
 {
-    my_solv->my_map.buffer = malloc(sizeof(char) * 2048 * 2);
+    my_solv->my_map.buffer = malloc(sizeof(char) * my_solv->my_map.size);
     int get_rd = read(my_solv->my_map.fd, my_solv->my_map.buffer, my_solv->my_map.size);
     if (get_rd <= 0) {
         printf("Error when i read file please check your filepath !\n");

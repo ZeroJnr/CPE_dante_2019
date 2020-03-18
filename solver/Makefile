@@ -19,6 +19,7 @@ SRC = $(SRC_MAP)open_file.c	\
 	  $(SRC_MAP)preparing_map.c	\
 	  $(SRC_SOLV)get_max.c	\
 	  $(SRC_SOLV)solving_map.c	\
+	  $(SRC_SOLV)a_stars.c	\
 
 SRC_BUILD	=	$(SRC) $(SRC_DIR)main.c
 

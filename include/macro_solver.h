@@ -19,6 +19,11 @@
 #define EL '\n'
 #define STAR '*'
 #define WALL 'X'
-#define CARACTERE EF && EL && STAR && WALL
+#define CPATH my_solv->game.cpath
+#define WASHERE my_solv->game.washere
+#define ENDX my_solv->index.endx
+#define ENDY my_solv->index.endy
+#define STARTX my_solv->index.startx
+#define STARTY my_solv->index.starty
 
 #endif

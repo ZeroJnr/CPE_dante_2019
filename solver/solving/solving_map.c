@@ -7,7 +7,7 @@
 
 #include "dante.h"
 
-static void write_map(my_solv_t *my_solv)
+void write_map(my_solv_t *my_solv)
 {
     for (int y = 0; y < Y_MAX; y++) {
         for (int x = 0; x < X_MAX; x++) {
@@ -30,12 +30,45 @@ static int my_allocation(my_solv_t *my_solv)
     return 0;
 }
 
+static int my_allocation_sec(my_solv_t *my_solv)
+{
+    CPATH = malloc(sizeof(bool *) * (Y_MAX + 1));
+    if (!CPATH)
+        return 84;
+    for (int i = 0; i < Y_MAX; i++) {
+        CPATH[i] = malloc(sizeof(bool) * (X_MAX + 1));
+        if (!CPATH)
+            return 84;
+    }
+    return 0;
+}
+
+static int my_allocation_third(my_solv_t *my_solv)
+{
+    WASHERE = malloc(sizeof(bool *) * (Y_MAX + 1));
+    if (!WASHERE)
+        return 84;
+    for (int i = 0; i < Y_MAX; i++) {
+        WASHERE[i] = malloc(sizeof(bool) * (X_MAX + 1));
+        if (!WASHERE)
+            return 84;
+    }
+    return 0;
+}
+
+
 static int assigment_map(my_solv_t *my_solv)
 {
     int x = 0;
     int y = 0;
+    int alloc_maze = 0;
+    int alloc_path = 0;
+    int alloc_was_here = 0;
 
-    if (my_allocation(my_solv) == 84)
+    alloc_maze = my_allocation(my_solv);
+    alloc_path = my_allocation_sec(my_solv);
+    alloc_was_here = my_allocation_third(my_solv);
+    if (alloc_maze == 84 || alloc_path == 84 || alloc_was_here == 84)
         return 84;
     for (int i = 0; y < Y_MAX; i++, y++) {
         for (x = 0; x < X_MAX; i++, x++)
@@ -49,6 +82,7 @@ int solving_map(my_solv_t *my_solv)
 {
     if (assigment_map(my_solv) == 84)
         return 84;
-    write_map(my_solv);
+    if (check_carac(my_solv) == 84)
+        return 84;
     return 0;
 }
