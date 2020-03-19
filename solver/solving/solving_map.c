@@ -46,7 +46,6 @@ static int my_allocation_third(my_solv_t *my_solv)
     return 0;
 }
 
-
 static int assigment_map(my_solv_t *my_solv)
 {
     int x = 0;
