@@ -47,8 +47,6 @@ bool recursivesolve(my_solv_t *my_solv, int x, int y)
     return false;
 }
 
-
-
 bool recursive_core(my_solv_t *my_solv)
 {
     ENDY = Y_MAX - 1;

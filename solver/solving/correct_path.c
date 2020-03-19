@@ -28,5 +28,5 @@ void correct_path(my_solv_t *my_solv)
             }
         }
     }
-   write_map_sec(my_solv);
+    write_map_sec(my_solv);
 }
