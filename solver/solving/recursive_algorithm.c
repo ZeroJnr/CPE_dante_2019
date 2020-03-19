@@ -76,7 +76,7 @@ bool recursive_core(my_solv_t *my_solv)
         }
     bool b = recursivesolve(my_solv, STARTX, STARTY);
     if (b == false) {
-        printf("Impossible map\n");
+        printf("no solution found");
         return false;
     }
     write_map_sec(my_solv);
