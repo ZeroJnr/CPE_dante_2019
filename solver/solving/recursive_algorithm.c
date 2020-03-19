@@ -31,6 +31,8 @@ bool recursivesolve(my_solv_t *my_solv, int x, int y)
 {
     if (y == ENDY && x == ENDX)
         return true;
+    if (MAZE[ENDY][ENDX] == 'X')
+        return false;
     if (MAZE[y][x] == 'X' || WASHERE[y][x]) {
         return false;
     }
