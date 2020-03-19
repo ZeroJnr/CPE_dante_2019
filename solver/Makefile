@@ -21,6 +21,7 @@ SRC = $(SRC_MAP)open_file.c	\
 	  $(SRC_SOLV)get_max.c	\
 	  $(SRC_SOLV)solving_map.c	\
 	  $(SRC_SOLV)recursive_algorithm.c	\
+	  $(SRC_SOLV)correct_path.c	\
 
 SRC_BUILD	=	$(SRC) $(SRC_DIR)main.c
 

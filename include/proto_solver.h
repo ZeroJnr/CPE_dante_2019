@@ -23,5 +23,7 @@ int solving_map(my_solv_t *my_solv);
 bool recursive_core(my_solv_t *my_solv);
 int check_carac(my_solv_t *my_solv);
 bool recursivesolve(my_solv_t *my_solv, int x, int y);
+void correct_path(my_solv_t *my_solv);
+void write_map_sec(my_solv_t *my_solv);
 
 #endif

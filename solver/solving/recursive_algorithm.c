@@ -47,22 +47,7 @@ bool recursivesolve(my_solv_t *my_solv, int x, int y)
     return false;
 }
 
-static void write_map_sec(my_solv_t *my_solv)
-{
-    for (int y = 0; y < Y_MAX; y++) {
-        for (int x = 0; x < X_MAX; x++) {
-            if (MAZE[y][x] != 'X') {
-                if (CPATH[y][x] == true || (y == ENDY && x == ENDX))
-                    MAZE[y][x] = 'o';
-                else
-                    MAZE[y][x] = '*';
-            }
-            printf("%c", MAZE[y][x]);
-        }
-        if (y < Y_MAX - 1)
-            printf("\n");
-    }
-}
+
 
 bool recursive_core(my_solv_t *my_solv)
 {
@@ -79,6 +64,6 @@ bool recursive_core(my_solv_t *my_solv)
         printf("no solution found");
         return false;
     }
-    write_map_sec(my_solv);
+    correct_path(my_solv);
     return true;
 }
