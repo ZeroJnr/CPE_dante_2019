@@ -11,9 +11,9 @@ void display_maze(gen_t *gen)
 {
     int y = 0;
 
-    for (; MAZEGEN[y + 1] != NULL; ++y) {
-        my_putstr(MAZEGEN[y]);
-        my_putchar('\n');
+    for (; MAZEGEN[y] != NULL; ++y) {
+        printf("%s", MAZEGEN[y]);
+        if (y < Y - 1)
+            printf("\n");
     }
-    my_putstr(MAZEGEN[y]);
 }
